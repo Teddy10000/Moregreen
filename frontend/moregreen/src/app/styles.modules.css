@@ -1,0 +1,46 @@
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px); /* Apply a blurred background effect */
+    border-radius: 50px; /* Oval shape */
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+  
+  .navbar a {
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ddd; /* Hover effect */
+  }
+  
+  /* Mobile menu styles */
+  .mobile-menu-button {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .mobile-menu-button.open {
+    transform: rotate(90deg); /* Rotate the icon when the menu is open */
+  }
+  
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .mobile-menu.open {
+    display: flex; /* Show the menu when open */
+  }
+  
