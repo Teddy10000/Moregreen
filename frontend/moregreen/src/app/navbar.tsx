@@ -1,7 +1,9 @@
-'use client'
+'use client';
+import './styles.modules.css';
 import { useState } from 'react';
 import Link from 'next/link';
-
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import the icons you want to use
+import Image from 'next/image';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -9,80 +11,36 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const navbarLinkStyles: React.CSSProperties = {
-    position: 'relative',
-    color: 'white',
-    fontWeight: 600,
-    textDecoration: 'none',
-    transition: 'color 0.3s',
-  };
-
-  const navbarLinkHoverStyles: React.CSSProperties = {
-    width: '100%',
-  };
-
   return (
-    <nav className={`navbar ${menuOpen ? 'bg-blue-500' :  'bg-blue-500'}`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <div className="text-white text-lg font-semibold mr-6">Sports Prediction</div>
-          {/* Responsive menu icon */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className={`mobile-menu-button ${menuOpen ? 'open' : ''}`}
-            >
-              {menuOpen ? (
-                <i className="fas fa-times"></i>
-              ) : (
-                <i className="fas fa-bars"></i>
-              )}
-            </button>
-          </div>
-        </div>
-
-        <div className={`lg:flex items-center ${menuOpen ? 'mobile-menu open' : ''}`}>
-          <ul className="lg:flex space-x-6">
-            <li>
-              <Link href="/">
-                <span style={navbarLinkStyles} className="hover:text-gray-200">
-                  Home
-                  <span style={navbarLinkHoverStyles}></span>
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/predictions">
-                <span style={navbarLinkStyles} className="hover:text-gray-200">
-                  Predictions
-                  <span style={navbarLinkHoverStyles}></span>
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/rankings">
-                <span style={navbarLinkStyles} className="hover:text-gray-200">
-                  Rankings
-                  <span style={navbarLinkHoverStyles}></span>
-                </span>
-              </Link>
-            </li>
-          </ul>
-
-          {/* User avatar and name */}
-          <div className="lg:ml-6 mt-4 lg:mt-0">
-            <div className="flex items-center space-x-2">
-              <div className="text-white font-semibold">John Doe</div>
-              <img
-                src="/avatar.jpg" // Replace with actual image source
-                alt="User Avatar"
-                className="w-8 h-8 rounded-full"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+    
+  <div className="navbar navbar-sticky">
+	<div className="navbar-start">
+		<a className="navbar-item">Ripple UI</a>
+	</div>
+	<div className="navbar-center invisible md:block md:visible">
+		<a className="navbar-item">Home</a>
+		<a className="navbar-item">About</a>
+		<a className="navbar-item">Contact</a>
+	</div>
+  <div className="navbar-center   visible  md:invisible">
+    <div className="dropdown text-center flex">
+    <label className="btn btn-solid-primary my-2 bg-green-400" tabIndex={0}><FaBars className="text-green-500"/></label>
+    <div className="dropdown-menu justify-center self-center items-center">
+      <a className="dropdown-item text-center text-sm">Home</a>
+      <a tabIndex={-1} className="dropdown-item text-center text-sm">About</a>
+      <a tabIndex={-1} className="dropdown-item text-center text-sm">Contact</a>
+      <button className="btn btn-success w-20  hover:bg-green-700">login</button>
+  <button className="btn mt-2 btn-success w-20  hover:bg-green-700">signup</button>
+	</div>
+</div>
+	</div>
+	<div className="navbar-end pr-20 mr-10 invisible md:visible ">
+  <button className="btn btn-success hover:bg-green-700">login</button>
+  <button className="btn btn-success hover:bg-green-700">signup</button>
+	</div> 
+ 
+</div>
+  
   );
 };
 
