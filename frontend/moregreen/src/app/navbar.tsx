@@ -15,12 +15,14 @@ const Navbar = () => {
     
   <div className="navbar navbar-sticky">
 	<div className="navbar-start">
-		<a className="navbar-item">Ripple UI</a>
+		<a className="navbar-item text-green-400 hover:text-green-800 " style={{ color: 'green' }}>MoreGreeen</a>
 	</div>
 	<div className="navbar-center invisible md:block md:visible">
-		<a className="navbar-item">Home</a>
-		<a className="navbar-item">About</a>
-		<a className="navbar-item">Contact</a>
+		<a className="navbar-item text-green-800" style={{ color: 'green',transition: 'color 0.3s', }}>Home
+    
+    </a>
+		<a className="navbar-item text-green-800" style={{ color: 'green' }}>About</a>
+		<a className="navbar-item text-green-800" style={{ color: 'green' }}>Contact</a>
 	</div>
   <div className="navbar-center   visible  md:invisible">
     <div className="dropdown text-center flex">
