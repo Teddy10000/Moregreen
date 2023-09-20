@@ -1,3 +1,4 @@
+import HeroMain from "./components/homesection/hero";
 
 
 export default function Home() {
@@ -6,7 +7,7 @@ export default function Home() {
     <main className="h-screen w-full  ">
     <>
     
-    
+    <HeroMain/>
     
 
    

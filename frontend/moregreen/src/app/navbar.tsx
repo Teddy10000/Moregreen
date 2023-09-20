@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     
-  <div className="navbar navbar-sticky">
+  <div className="navbar navbar-sticky z-40">
 	<div className="navbar-start">
 		<a className="navbar-item text-green-400 hover:text-green-800 " style={{ color: 'green' }}>MoreGreeen</a>
 	</div>
