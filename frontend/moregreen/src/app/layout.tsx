@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google' ;
 import  {Roboto} from 'next/font/google';
 import { Blaka_Hollow } from 'next/font/google';
-
+import AuthProvider from './context/AuthProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -63,10 +63,12 @@ export default function RootLayout({
         </div>
         </div>
 
-        ) : (
+        ) : ( 
           <>
+            <AuthProvider>
             <Navbar />
             {children}
+            </AuthProvider>
           </>
         )}
       </body>
