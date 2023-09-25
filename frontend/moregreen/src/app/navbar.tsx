@@ -1,13 +1,17 @@
 'use client';
-import { usePathname } from 'next/navigation';
+import { usePathname ,useRouter } from 'next/navigation'; 
+import { useSession } from 'next-auth/react';
 import './styles.modules.css';
 import { useState } from 'react';
+import { signOut,signIn } from 'next-auth/react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import the icons you want to use
 import Image from 'next/image';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const {status} = useSession(); 
+  const route = useRouter();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -36,14 +40,27 @@ const Navbar = () => {
             <a className="dropdown-item text-center text-sm">Home</a>
             <a tabIndex={-1} className="dropdown-item text-center text-sm">About</a>
             <a tabIndex={-1} className="dropdown-item text-center text-sm">Contact</a>
-            <button className="btn btn-success w-20  hover:bg-green-700">login</button>
-        <button className="btn mt-2 btn-success w-20  hover:bg-green-700">signup</button>
+            {status == 'authenticated' ? <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> : (
+        <>
+        <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">login</button>
+        <button  onClick={()=>route.push('/signins')} className="btn btn-success hover:bg-green-700">signup</button>
+        </>
+        )}
         </div>
       </div>
         </div>
-        <div className="navbar-end pr-20 mr-10 invisible md:visible ">
-        <button className="btn btn-success hover:bg-green-700">login</button>
-        <button className="btn btn-success hover:bg-green-700">signup</button>
+        <div className="navbar-end pr-20 mr-10 invisible md:visible "> 
+        {status == 'authenticated' ? <> <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> 
+        <div className="avatar">
+        <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
+        
+      </div><p>User</p> </>
+        : (
+        <>
+         <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">login</button>
+         <button  onClick={()=>route.push('/signins')} className="btn btn-success hover:bg-green-700">signup</button>
+        </>
+        )}
         </div> 
       
       </div> 
