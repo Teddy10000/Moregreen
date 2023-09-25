@@ -27,19 +27,19 @@ const Navbar = () => {
           <a className="navbar-item text-green-400 hover:text-green-800 " style={{ color: 'green' }}>MoreGreeen</a>
         </div>
         <div className="navbar-center invisible md:block md:visible">
-          <a className="navbar-item text-green-800" style={{ color: 'green',transition: 'color 0.3s', }}>Home
+          <a href="/predictions" className="navbar-item text-green-800 hover:underline" style={{ color: 'green',transition: 'color 0.3s', }}>Predictions
           
           </a>
-          <a className="navbar-item text-green-800" style={{ color: 'green' }}>About</a>
-          <a className="navbar-item text-green-800" style={{ color: 'green' }}>Contact</a>
+          <a href="/about" className="navbar-item text-green-800" style={{ color: 'green' }}>About</a>
+          <a href="/contact"  className="navbar-item text-green-800" style={{ color: 'green' }}>Contact</a>
         </div>
         <div className="navbar-center   visible  md:invisible">
           <div className="dropdown text-center flex">
           <label className="btn btn-solid-primary my-2 bg-green-400" tabIndex={0}><FaBars className="text-green-500"/></label>
-          <div className="dropdown-menu justify-center self-center items-center">
-            <a className="dropdown-item text-center text-sm">Home</a>
-            <a tabIndex={-1} className="dropdown-item text-center text-sm">About</a>
-            <a tabIndex={-1} className="dropdown-item text-center text-sm">Contact</a>
+          <div className="dropdown-menu justify-center bg-black self-center items-center" style={{ backgroundColor: 'black', color: 'green' }}>
+            <a href="/predictions" className="dropdown-item text-center text-sm" style={{ color: 'green' }} >Predictions</a>
+            <a href="/about" tabIndex={-1} className="dropdown-item text-center text-sm" style={{ color: 'green' }}>About</a>
+            <a href="/contact" tabIndex={-1} className="dropdown-item text-center text-sm" style={{ color: 'green' }}>Contact</a>
             {status == 'authenticated' ? <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> : (
         <>
         <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">login</button>

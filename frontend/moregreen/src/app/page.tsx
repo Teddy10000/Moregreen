@@ -1,4 +1,6 @@
+import BettingAdviceSection from "./components/homesection/advice";
 import HeroMain from "./components/homesection/hero";
+import Samplebet from "./components/homesection/samplebet";
 
 
 export default function Home() {
@@ -7,7 +9,9 @@ export default function Home() {
     <main className="h-screen w-full  ">
     <>
     
-    <HeroMain/>
+    <HeroMain/> 
+    <BettingAdviceSection/> 
+    <Samplebet/>
     
 
    
