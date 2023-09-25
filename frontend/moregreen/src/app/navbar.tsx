@@ -10,7 +10,7 @@ import Image from 'next/image';
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const {status} = useSession(); 
+  const {status,data:session} = useSession(); 
   const route = useRouter();
 
   const toggleMenu = () => {
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="avatar">
         <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
         
-      </div><p>User</p> </>
+      </div><p>{session?.user?.name}</p> </>
         : (
         <>
          <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">login</button>
