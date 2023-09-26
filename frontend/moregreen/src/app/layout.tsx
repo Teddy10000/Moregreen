@@ -8,10 +8,14 @@ import { Inter } from 'next/font/google' ;
 import  {Roboto} from 'next/font/google';
 import { Blaka_Hollow } from 'next/font/google';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AuthProvider from './context/AuthProvider';
 =======
 
 >>>>>>> frontend-setup
+=======
+import AuthProvider from './context/AuthProvider';
+>>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -60,9 +64,13 @@ export default function RootLayout({
             width: 300px;
             height: 300px;
 <<<<<<< HEAD
+<<<<<<< HEAD
             color:green;
 =======
 >>>>>>> frontend-setup
+=======
+            color:green;
+>>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
             
           }
         `}
@@ -70,6 +78,7 @@ export default function RootLayout({
         </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         ) : ( 
           <>
@@ -79,10 +88,18 @@ export default function RootLayout({
             </AuthProvider>
 =======
         ) : (
+=======
+        ) : ( 
+>>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
           <>
+            <AuthProvider>
             <Navbar />
             {children}
+<<<<<<< HEAD
 >>>>>>> frontend-setup
+=======
+            </AuthProvider>
+>>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
           </>
         )}
       </body>
