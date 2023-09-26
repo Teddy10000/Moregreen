@@ -20,7 +20,7 @@ export async function getProjects(){
             teams {
                 team1,
                 team2,
-                league
+                league,
               },
             prediction,
             outcome,
