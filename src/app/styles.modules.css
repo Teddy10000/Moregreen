@@ -1,0 +1,80 @@
+/* styles.css */
+/* Oval Shape and Hover Animation */
+/* Add these styles to your CSS or SCSS file */
+
+/* Mobile menu slide-in animation */
+
+/* Navbar base styles */
+.navbar {
+  background-color: transparent;
+  backdrop-filter: blur(10px); /* Apply a blurred background effect */
+  border-radius: 50px; /* Oval shape */
+  
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 10; 
+ 
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ddd; /* Hover effect */
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 0;
+  width: 100vw;
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust background color as needed */
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateX(0);
+}
+
+/* Hover ball effect */
+.relative {
+  position: relative;
+}
+
+.hover-ball {
+  width: 10px;
+  height: 10px;
+  background-color: blue; /* Adjust ball color as needed */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.3s;
+}
+
+.relative:hover .hover-ball {
+  transform: translateY(-50%) scale(1);
+}
+
+.mobile-menu-button {
+  color: green;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  float:inline-end;
+}
+
+.mobile-menu-button.open {
+  transform: rotate(90deg); /* Rotate the icon when the menu is open */
+}
