@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import BettingAdviceSection from "./components/homesection/advice";
 import HeroMain from "./components/homesection/hero";
 import Samplebet from "./components/homesection/samplebet";
@@ -29,3 +30,28 @@ export default function Home() {
    
   )
 }
+=======
+import BettingAdviceSection from "./components/homesection/advice";
+import HeroMain from "./components/homesection/hero";
+import Samplebet from "./components/homesection/samplebet";
+
+
+export default function Home() {
+  return (
+    
+    <main className="h-screen w-full  ">
+    <>
+    
+    <HeroMain/> 
+    <BettingAdviceSection/> 
+    <Samplebet/>
+    
+
+   
+    </>
+    
+    </main>
+   
+  )
+}
+>>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
