@@ -4,15 +4,15 @@ import { MdTaskAlt } from "react-icons/md";
 export default function Tabs(){
 
     const [activeTab, setActiveTab] = useState(0);
-  const handleTabClick = (tabIndex) => {
-      setActiveTab(tabIndex);
-    };
+    const handleTabClick = (tabIndex: number): void => {
+        setActiveTab(tabIndex);
+      };
 
     return (
         <>
         <div className="flex flex-col sm:ml-[290px]">
         <div className="flex-col flex md:flex-row p-4 ml-10 md:ml-0 font-bold text-3xl md:text-5xl justify-center md:self-center">
-          
+            PREDICTIONS
         </div>
         <p className="font-bold w-40 ml-56 p-1 md:p-0 md:ml-4 mt-[-52px] md:mt-0 text-xl md:self-center bg-gray-400">Total Tasks: {tasklist.length}</p> 
        
@@ -59,9 +59,9 @@ export default function Tabs(){
 
         <div className="mt-4">
           <div className="tab-content">
-            {activeTab === 0 && <Tab1Content tasklist={tasklist} handleTaskSubmit={handleTaskSubmit} teamMembers={teamMembers} showModal={showModal} closeModal={closeModal} modalMessage={modalMessage} Added={Added}/>}
-            {activeTab === 1 && <Tab2Content />}
-            {activeTab === 2 && <Tab3Content />}
+            {activeTab === 0 && }
+            {activeTab === 1 && }
+            {activeTab === 2 && }
           </div>
         </div>
       </div>
