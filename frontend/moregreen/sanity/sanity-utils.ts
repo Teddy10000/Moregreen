@@ -18,7 +18,8 @@ export async function getProjects(){
             date,
             teams {
                 team1,
-                team2
+                team2,
+                league
               },
             prediction,
             outcome,

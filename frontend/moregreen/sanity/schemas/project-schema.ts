@@ -24,6 +24,26 @@ const project = {
             title: 'Team 2',
             type: 'string',
           },
+          {
+            name: 'league',
+            title: 'League',
+            type: 'string',
+            options: {
+              list: [
+                { title: 'Premier League', value: 'premier-league' },
+                { title: 'La Liga', value: 'la-liga' },
+                { title: 'Bundesliga', value: 'bundesliga' },
+                { title: 'Serie A', value: 'serie-a' },
+                { title: 'Ligue 1', value: 'ligue-1' },
+                { title: 'MLS', value: 'mls' },
+                { title: 'Eredivisie', value: 'eredivisie' },
+                { title: 'Primeira Liga', value: 'primeira-liga' },
+                { title: 'Brasileirão', value: 'brasileirao' },
+                { title: 'Argentine Primera División', value: 'argentine-primera-division' },
+                // Add more leagues from different countries
+              ],
+            },
+          },
         ],
       },
       {
