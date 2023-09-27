@@ -6,9 +6,9 @@ const project = {
     type: 'document',
     fields: [
       {
-        name: 'date',
-        title: 'Date',
-        type: 'date',
+        name: 'datetime',
+        title: 'Date and Time',
+        type: 'datetime',
       },
       {
         name: 'teams',

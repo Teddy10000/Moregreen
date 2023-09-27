@@ -1,6 +1,9 @@
+'use client'
+
 import { useState } from "react";
 import { BsListTask } from "react-icons/bs"; 
 import { MdTaskAlt } from "react-icons/md";
+import PreviousTable from "./previousbettable";
 export default function Tabs(){
 
     const [activeTab, setActiveTab] = useState(0);
@@ -14,7 +17,7 @@ export default function Tabs(){
         <div className="flex-col flex md:flex-row p-4 ml-10 md:ml-0 font-bold text-3xl md:text-5xl justify-center md:self-center">
             PREDICTIONS
         </div>
-        <p className="font-bold w-40 ml-56 p-1 md:p-0 md:ml-4 mt-[-52px] md:mt-0 text-xl md:self-center bg-gray-400">Total Tasks: {tasklist.length}</p> 
+         
        
         <div className="">
         <div className=" py-8">
@@ -59,9 +62,9 @@ export default function Tabs(){
 
         <div className="mt-4">
           <div className="tab-content">
-            {activeTab === 0 && }
-            {activeTab === 1 && }
-            {activeTab === 2 && }
+            {activeTab === 0 && <PreviousTable/> }
+            {activeTab === 1 && <PreviousTable/>}
+            {activeTab === 2 && <PreviousTable/>}
           </div>
         </div>
       </div>

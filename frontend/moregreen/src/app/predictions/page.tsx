@@ -1,6 +1,7 @@
 
 import { options } from "../api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth" 
+import Tabs from "./tabs"
 
 
 export default async function Home(){
@@ -11,8 +12,8 @@ export default async function Home(){
 return(
     <>
     {session? (
-        <div>
-                <h1>okay sjfbsdjfdbjdk</h1>
+        <div className="">
+                <Tabs/>
         </div>
     ):(<div>
         <h1>Please go login to see this section</h1>

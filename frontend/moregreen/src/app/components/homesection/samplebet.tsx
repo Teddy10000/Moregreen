@@ -1,13 +1,45 @@
 
 'use client'
-import {useState} from 'react';
+
+import {useState, useEffect} from 'react';
+import Image from 'next/image';
+
+import { useData } from '../../../../sanity/DataContext';
+import formatDateTime from './dateformating';
+import { FaCheck, FaTimes } from 'react-icons/fa';
+
+
 
 export default function Samplebet(){
-	const [isTableVisible, setTableVisible] = useState(false);
-
+	
+  const [isTableVisible, setTableVisible] = useState(false);
+  const { bettingData, isLoading } = useData();
 	const toggleTable = () => {
 	  setTableVisible(!isTableVisible);
 	};
+  const [bets, setBets] = useState([]);
+  
+ // The empty dependency array ensures the effect runs once after the initial render
+  interface Bet {
+    _id: string;
+    _createdAt: string;
+    datetime: string;
+    teams: {
+      team1: string;
+      team2: string;
+      league: string;
+    };
+    prediction: string;
+    outcome: boolean;
+    matchstart: boolean;
+    Freebet: boolean;
+  }
+  const freebetYesRows: Bet[] = bettingData.filter((item: Bet) => item.Freebet);
+  if (isLoading) {
+    return <p>Loading...</p>; // Display a loading indicator
+  }
+
+  // Now you can safely access bettingData because isLoading is false
 
     return(
         <div className="container mx-auto">
@@ -55,6 +87,7 @@ export default function Samplebet(){
         <table className="table-zebra table">
           <thead>
             <tr>
+              <th>Number</th>
               <th>Date</th>
               <th>Teams</th>
               <th>Tips</th>
@@ -62,36 +95,28 @@ export default function Samplebet(){
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
-              <td>Purple</td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
-              <td>Red</td>
-            </tr>
+          {freebetYesRows.map((item, index) => (
+      <tr key={index}>
+        <th>{index + 1}</th>
+        <td className="text-center  " style={{ whiteSpace: 'nowrap' }}>
+            <div className="flex flex-col flex-wrap">
+        {formatDateTime(item.datetime)}
+  </div>
+          </td>
+
+        <td><span className="font-bold">{item.teams.team1}</span> vs <span className='font-bold'>{item.teams.team2}</span></td>
+        <td>{item.prediction}</td>
+        <td>
+              {item.outcome === true ? (
+          <FaCheck className="text-green-500"/>
+        ) : item.outcome === false ? (
+          <FaTimes className="text-red-500"/>
+        ) : (
+          'N/A'
+  )}
+</td>
+      </tr>
+    ))}
           </tbody>
         </table>)}
 		</div>

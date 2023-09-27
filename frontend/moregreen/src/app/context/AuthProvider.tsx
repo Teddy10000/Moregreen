@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 
 
@@ -12,19 +12,5 @@ export default function AuthProvider( {children }:{
             {children}
         </SessionProvider>
     )
-=======
-'use client'
 
-
-import {SessionProvider} from 'next-auth/react'
-
-export default function AuthProvider( {children }:{
-    children:React.ReactNode
-}) {
-    return (
-        <SessionProvider>
-            {children}
-        </SessionProvider>
-    )
->>>>>>> 205af39edd9b980b34dc296111e7cfc7eb057a24
 }
