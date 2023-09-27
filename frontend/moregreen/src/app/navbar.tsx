@@ -32,8 +32,8 @@ const Navbar = () => {
           <a href="/predictions" className="navbar-item text-green-800 hover:underline" style={{ color: 'green',transition: 'color 0.3s', }}>Predictions
           
           </a>
-          <a href="/about" className="navbar-item text-green-800" style={{ color: 'green' }}>About</a>
-          <a href="/contact"  className="navbar-item text-green-800" style={{ color: 'green' }}>Contact</a>
+          <a href="/about" className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>About</a>
+          <a href="/contact"  className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>Contact</a>
         </div>
         <div className="navbar-center   visible  md:invisible">
           <div className="dropdown text-center flex">
