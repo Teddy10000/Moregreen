@@ -23,7 +23,7 @@ const Modal: FunctionComponent<ModalProps> = ({
       <div className="card">
         {success ? (
           <div className="alert alert-info">
-            <FaCheck className="w-48 h-48 text-blue-900"></FaCheck>
+            <FaCheck className="w-48 h-48 text-green-900"></FaCheck>
 
             <div className="flex flex-col">
               <span>Success</span>
@@ -53,7 +53,7 @@ const Modal: FunctionComponent<ModalProps> = ({
         )}
 
         <button
-          className={`bg-${success ? 'blue-900' : 'red-500'} hover:bg-${
+          className={`bg-${success ? 'green-900' : 'red-500'} hover:bg-${
             success ? 'green-900' : 'red-700'
           } text-white font-bold py-2 px-4 rounded`}
           onClick={closeModal}

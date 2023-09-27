@@ -35,12 +35,12 @@ const generateEmailContent = (data: Record<string, string>) => {
           font-weight: bold;
         }
         .company-name {
-          color: #0000FF; /* Blue text color */
+          color: green; /* Blue text color */
         }
       </style>
     </head>
     <body>
-      <p class="company-name">Vycol Ventures</p>
+      <p class="company-name">MORE GREEN</p>
       ${htmlData}
     </body>
   </html>
