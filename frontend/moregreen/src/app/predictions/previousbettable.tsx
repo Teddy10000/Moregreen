@@ -11,7 +11,12 @@ export default function PreviousTable(){
 	const [bets, setBets] = useState([]);
 	const {bettingData,isLoading} = useData();
 	
-	
+	const today = new Date();
+	const year = today.getFullYear();
+	const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+	const day = String(today.getDate()).padStart(2, '0');
+
+const formattedDate = `${year}-${month}-${day}`;
  // The empty dependency array ensures the effect runs once after the initial render
 	  interface Bet {
 		_id: string;
@@ -31,9 +36,14 @@ export default function PreviousTable(){
 	  if (isLoading) {
 		return <p>Loading...</p>; // Display a loading indicator
 	  }
+
+	  const pastBets = bettingData.filter(bet => {
+		const betDate = new Date(bet.datetime);
+		return betDate < today; // Compare with today's date
+	  });
 	  
     return (
-        <div className="mx-auto container">
+        <div className="">
             <h1></h1>
           <div className="flex w-full overflow-x-auto">
 	<table className="table-hover table">
@@ -47,7 +57,7 @@ export default function PreviousTable(){
 			</tr>
 		</thead>
 		<tbody>
-		{bettingData.map((item, index) => (
+		{pastBets.map((item, index) => (
       <tr key={index}>
         <th>{index + 1}</th>
         <td className="text-center  " style={{ whiteSpace: 'nowrap' }}>

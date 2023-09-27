@@ -110,7 +110,7 @@ const ContactFormSection: React.FC = () => {
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Left Section with Form */}
         <div className="md:w-1/2 md:h-60 md:-mt-32">
-          <div className="bg-yellow-500 p-8 rounded-lg mb-6 relative">
+          <div className="bg-green-500 p-8 rounded-lg mb-6 relative">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">Contact Us</h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-1">

@@ -24,7 +24,7 @@ const roboto = Roboto({
 
 const ContactHeroSection = () => {
   return (
-    <div className="relative h-screen md:h-[70vh]">
+    <div className="relative -z-20 h-screen md:h-[70vh]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -34,7 +34,7 @@ const ContactHeroSection = () => {
           layout='fill'
           className=''
         />
-        <div className="bg-blue-200 opacity-70 absolute inset-0"></div>
+        <div className="bg-green-200 opacity-70 absolute inset-0"></div>
       </div>
 
       {/* Content */}
@@ -44,8 +44,8 @@ const ContactHeroSection = () => {
          initial="hidden" 
          whileInView={'show'} 
          viewport={{once:false, amount:0.4}}
-        className={`text-6xl font-bold ${roboto.className} md:text-6xl text-yellow-600 font-bold mb-4 text-center`}>
-         <span className="text-blue-900"> Contact</span> Us
+        className={`text-6xl font-bold ${roboto.className} md:text-6xl text-black font-bold mb-4 text-center`}>
+         <span className="text-green-600"> Contact</span> Us
         </motion.h1>
         <motion.p 
          variants={fadeIn('up',0.3)}

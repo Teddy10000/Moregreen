@@ -2,6 +2,8 @@
 import BettingAdviceSection from "./components/homesection/advice";
 import HeroMain from "./components/homesection/hero";
 import Samplebet from "./components/homesection/samplebet";
+import StatisticsSection from "./components/homesection/statistics";
+import Footer from "./footer";
 
 
 
@@ -15,7 +17,9 @@ export default function Home() {
     
     <HeroMain/> 
     <BettingAdviceSection/> 
-    <Samplebet/>
+    <Samplebet/> 
+    <StatisticsSection/> 
+    <Footer/>
     
 
    

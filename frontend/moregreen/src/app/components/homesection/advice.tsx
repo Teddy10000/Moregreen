@@ -8,7 +8,7 @@ import { getProjects } from '../../../../sanity/sanity-utils';
 const BettingAdviceSection: React.FC = () => {
 
   return (
-    <section className="bg-green-500 py-16">
+    <section className="md:bg-green-500 py-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center text-center">
         {/* Image with Background Removed (Left) */}
         <div className=" invisible md:visible md:w-1/2 mb-8">
