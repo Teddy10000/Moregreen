@@ -12,7 +12,7 @@ export default async function Home(){
 return(
     <>
     {session? (
-        <div className="">
+        <div className="mt-20">
                 <Tabs/>
         </div>
     ):(<div>
