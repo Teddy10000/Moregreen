@@ -1,3 +1,4 @@
+
 import {createClient,groq} from "next-sanity";
 
 export async function getProjects(){
@@ -12,19 +13,18 @@ export async function getProjects(){
 
     return  client.fetch(
 
-        groq`*[_type = "project"]{
+        groq`*[_type == "project"]{
             _id,
             _createdAt,
-            date,
-            teams {
-                team1,
-                team2
-              },
+            datetime,
+            teams,
             prediction,
             outcome,
-            matchstart
+            matchstart,
+            Freebet
 
 
         }`
     )
+
 }

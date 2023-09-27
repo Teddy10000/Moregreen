@@ -1,3 +1,4 @@
+
 import {defineConfig} from 'sanity';
 import {deskTool} from "sanity/desk";
 import project from './sanity/schemas/project-schema';
@@ -14,5 +15,6 @@ const config = defineConfig({
 
 
 })
+
 
 export default config;

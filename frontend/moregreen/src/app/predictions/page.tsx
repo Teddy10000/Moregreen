@@ -1,5 +1,8 @@
+
 import { options } from "../api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth" 
+import Tabs from "./tabs"
+import Footer from "../footer"
 
 
 export default async function Home(){
@@ -9,13 +12,19 @@ export default async function Home(){
 
 return(
     <>
-    {session? (
-        <div></div>
+    {session? (<>
+        <div className="mx-auto container mt-32">
+                <Tabs/>
+                
+        </div>
+        <Footer/>
+        </>
     ):(<div>
-        <h1>Please Login</h1>
+        <h1>Please go login to see this section</h1>
     </div>)}
     
     </>
 )
+
 
 }

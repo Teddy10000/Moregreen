@@ -1,12 +1,13 @@
 'use client'
 import './globals.css'
-import Navbar from './Navbar';
+import Navbar from './navbar';
 import { useState, useEffect } from 'react';
 import type { Metadata } from 'next' 
-
+import { DataProvider } from '../../sanity/DataContext';
 import { Inter } from 'next/font/google' ;
 import  {Roboto} from 'next/font/google';
 import { Blaka_Hollow } from 'next/font/google';
+
 import AuthProvider from './context/AuthProvider';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -65,13 +66,17 @@ export default function RootLayout({
 
         ) : ( 
           <>
-            <AuthProvider>
+          
+            <AuthProvider> 
+            <DataProvider>
             <Navbar />
             {children}
+            </DataProvider>
+
             </AuthProvider>
           </>
         )}
       </body>
     </html>
   );
-}
+        }

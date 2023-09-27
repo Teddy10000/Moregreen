@@ -1,3 +1,4 @@
+
 'use client'
 
 
@@ -11,4 +12,5 @@ export default function AuthProvider( {children }:{
             {children}
         </SessionProvider>
     )
+
 }

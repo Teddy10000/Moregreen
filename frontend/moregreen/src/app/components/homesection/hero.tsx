@@ -1,3 +1,4 @@
+
 import { Oswald, Raleway, Roboto } from 'next/font/google';
 import Image from 'next/image';
 import image from '../images/backgroud-soccer.jpg'
@@ -51,3 +52,4 @@ const HeroMain = () => {
 };
 
 export default HeroMain;
+

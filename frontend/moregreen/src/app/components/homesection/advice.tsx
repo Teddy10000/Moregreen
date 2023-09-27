@@ -1,9 +1,14 @@
-import Image from 'next/image';
-import React from 'react';
+'use client'
 
+import {useState, useEffect} from 'react';
+
+import Image from 'next/image';
+
+import { getProjects } from '../../../../sanity/sanity-utils';
 const BettingAdviceSection: React.FC = () => {
+
   return (
-    <section className="bg-green-500 py-16">
+    <section className="md:bg-green-500 py-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center text-center">
         {/* Image with Background Removed (Left) */}
         <div className=" invisible md:visible md:w-1/2 mb-8">
@@ -21,10 +26,11 @@ const BettingAdviceSection: React.FC = () => {
           <h2 className="text-3xl font-bold mb-4">Betting Advice</h2>
           <p className="text-lg text-gray-800">
             Whether you're a novice or experienced bettor, here are some key tips to enhance your betting strategy:
+            Do not try if you are not 18 years of old.  
           </p>
           <ul className="mt-4">
             <li className="mb-2">
-              <span className="text-green-600 font-semibold">1. Research:</span> Analyze team stats, recent performance, and injury reports to make informed bets.
+              <span className="text-green-600 font-semibold">1. Research:</span> Analyze and edit some of the betting stakes to make maximum impact of our bet.
             </li>
             <li className="mb-2">
               <span className="text-green-600 font-semibold">2. Bankroll Management:</span> Set a budget and stick to it to avoid overspending.
@@ -46,3 +52,4 @@ const BettingAdviceSection: React.FC = () => {
 };
 
 export default BettingAdviceSection;
+

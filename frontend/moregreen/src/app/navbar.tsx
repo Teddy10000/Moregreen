@@ -1,3 +1,5 @@
+
+
 'use client';
 import { usePathname ,useRouter } from 'next/navigation'; 
 import { useSession } from 'next-auth/react';
@@ -24,14 +26,14 @@ const Navbar = () => {
         {!isAdmin && (<div>
         <div className="navbar navbar-sticky z-40">
         <div className="navbar-start">
-          <a className="navbar-item text-green-400 hover:text-green-800 " style={{ color: 'green' }}>MoreGreeen</a>
+          <a href='/' className="navbar-item text-green-400 hover:text-green-800 " style={{ color: 'green' }}>MoreGreeen</a>
         </div>
         <div className="navbar-center invisible md:block md:visible">
           <a href="/predictions" className="navbar-item text-green-800 hover:underline" style={{ color: 'green',transition: 'color 0.3s', }}>Predictions
           
           </a>
-          <a href="/about" className="navbar-item text-green-800" style={{ color: 'green' }}>About</a>
-          <a href="/contact"  className="navbar-item text-green-800" style={{ color: 'green' }}>Contact</a>
+          <a href="/about" className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>About</a>
+          <a href="/contact"  className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>Contact</a>
         </div>
         <div className="navbar-center   visible  md:invisible">
           <div className="dropdown text-center flex">
@@ -73,3 +75,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
