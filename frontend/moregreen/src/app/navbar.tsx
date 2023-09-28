@@ -35,9 +35,9 @@ const Navbar = () => {
           <a href="/about" className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>About</a>
           <a href="/contact"  className="navbar-item text-green-800 hover:underline" style={{ color: 'green' }}>Contact</a>
         </div>
-        <div className="navbar-center   visible  md:invisible">
-          <div className="dropdown text-center flex">
-          <label className="btn btn-solid-primary my-2 bg-green-400" tabIndex={0}><FaBars className="text-green-500"/></label>
+        <div   className="navbar-center    visible  md:hidden">
+          <div style={{marginRight:'700px'}} className="dropdown text-center flex">
+          <label  className="btn btn-solid-primary my-2 bg-green-400" tabIndex={0}><FaBars className="text-green-500"/></label>
           <div className="dropdown-menu justify-center bg-black self-center items-center" style={{ backgroundColor: 'black', color: 'green' }}>
             <a href="/predictions" className="dropdown-item text-center text-sm" style={{ color: 'green' }} >Predictions</a>
             <a href="/about" tabIndex={-1} className="dropdown-item text-center text-sm" style={{ color: 'green' }}>About</a>
@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="navbar-end pr-20 mr-10 invisible md:visible "> 
         {status == 'authenticated' ? <> <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> 
         <div className="avatar">
-        <Image src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
+        <Image width={40} height={40} src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
         
       </div><p>{session?.user?.name}</p> </>
         : (

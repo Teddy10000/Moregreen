@@ -25,7 +25,7 @@ export default function RootLayout({
     // Simulate a delay for demonstration purposes (you can replace this with your actual loading logic)
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Replace 2000 with your desired delay in milliseconds
+    }, 50); // Replace 2000 with your desired delay in milliseconds
 
     // Clean up the timeout on component unmount
     return () => clearTimeout(delay);

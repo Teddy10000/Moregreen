@@ -3,7 +3,8 @@
 
 const nextConfig = {
     images:{
-        domains: ['lh3.googleusercontent.com']
+        domains: ['lh3.googleusercontent.com','i.pravatar.cc']
+        
     }
 }
 
@@ -11,5 +12,5 @@ const nextConfig = {
 module.exports = nextConfig
 
 
-//process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+///process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
