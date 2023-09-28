@@ -53,7 +53,7 @@ const ContactHeroSection = () => {
          whileInView={'show'} 
          viewport={{once:false, amount:0.4}}
         className={`text-lg ${raleway.className}  md:text-2xl text-center`}>
-          We'd love to hear from you. Feel free to get in touch with us!
+          We will love to hear from you. Feel free to get in touch with us!
         </motion.p>
       </div>
     </div>

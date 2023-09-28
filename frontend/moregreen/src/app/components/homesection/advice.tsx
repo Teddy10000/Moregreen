@@ -25,7 +25,7 @@ const BettingAdviceSection: React.FC = () => {
         <div className="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-lg text-left">
           <h2 className="text-3xl font-bold mb-4">Betting Advice</h2>
           <p className="text-lg text-gray-800">
-            Whether you're a novice or experienced bettor, here are some key tips to enhance your betting strategy:
+            Whether you are a novice or experienced bettor, here are some key tips to enhance your betting strategy:
             Do not try if you are not 18 years of old.  
           </p>
           <ul className="mt-4">

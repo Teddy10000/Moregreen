@@ -14,7 +14,7 @@ const MainSection: React.FC = () => {
           <div className="p-6 border rounded-lg shadow-sm">
             <h3 className="text-xl font-semibold mb-4">Expert Predictions</h3>
             <p className="text-gray-600">
-              Get access to our team's expert predictions for upcoming sports events for free.
+              Get access to our team&apos;s expert predictions for upcoming sports events for free.
             </p>
           </div>
           <div className="p-6 border rounded-lg shadow-sm">

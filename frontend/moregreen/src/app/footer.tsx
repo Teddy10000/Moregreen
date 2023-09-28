@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2">
             <FaBan size={24} />
-            <p className="text-sm">Don't bet if you are under 18.</p>
+            <p className="text-sm">Donnot bet if you are under 18.</p>
           </div>
         </div>
       </div>

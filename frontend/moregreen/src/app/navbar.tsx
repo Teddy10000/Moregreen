@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="navbar-end pr-20 mr-10 invisible md:visible "> 
         {status == 'authenticated' ? <> <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> 
         <div className="avatar">
-        <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
+        <Image src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="avatar" /> 
         
       </div><p>{session?.user?.name}</p> </>
         : (
