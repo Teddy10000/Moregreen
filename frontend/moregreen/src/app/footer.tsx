@@ -40,11 +40,13 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="bg-red-500 text-black py-4 text-center w-[400px]">
+      <div className="flex justify-center content-center">
+      <div className="bg-red-500 text-black py-4 text-center w-full ">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2">
             <FaBan size={24} />
             <p className="text-sm">Donnot bet if you are under 18.</p>
+          </div>
           </div>
         </div>
       </div>

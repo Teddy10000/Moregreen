@@ -38,16 +38,16 @@ const StatisticsSection: React.FC = () => {
     <div className="absolute inset-0 bg-black opacity-60"></div>
     
     {/* Content Overlay */}
-    <div className="absolute top-0 left-0 w-full h-full p-4 ">
+    <div className="absolute top-0 left-0 w-[100hv] h-full p-4 ">
       <div className={`container mx-auto text-white pt-16 font-bold ${raleway.className}`}>
-        <h2 className={`text-6xl md:text-6xl font-semibold mb-8 ${roboto.className} text-green-600`}><span className="text-blue-900">Our</span> Achievements</h2>
-        <div className="grid grid-cols-1 text-yellow-600 sm:grid-cols-3 gap-8 text-center">
+        <h2 className={`text-5xl md:text-6xl font-semibold mb-8 ${roboto.className} text-green-600`}><span className="text-black">Our</span> Achievements</h2>
+        <div className="grid grid-cols-1 text-green-600 sm:grid-cols-3 gap-8 text-center">
           <motion.div 
             variants={fadeIn('down',0.3)}
             initial="hidden" 
             whileInView={'show'} 
             viewport={{once:false, amount:0.5}}
-          className="p-6 bg-white text-yellow-600 rounded-lg shadow-md">
+          className="p-6 bg-white text-green-600 rounded-lg shadow-md">
             <div className="text-4xl mb-2">
               <FaHandPaper />
             </div>

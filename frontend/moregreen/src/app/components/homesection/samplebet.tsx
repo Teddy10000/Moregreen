@@ -48,7 +48,7 @@ export default function Samplebet(){
   // Now you can safely access bettingData because isLoading is false
 
     return(
-        <div className="container mx-auto">
+        <div className="container mx-auto md:p-0 p-4">
             <p className={`text-4xl font-bold mt-4 mb-2 ${raleway.className}`}> Some sample life bet </p>
             <button
         className="btn btn-success flex self-center justify-center  hover:bg-green-700 text-white px-3 py-2 rounded-md focus:outline-none"
