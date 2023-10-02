@@ -7,8 +7,14 @@ import Image from 'next/image';
 import { useData } from '../../../../sanity/DataContext';
 import formatDateTime from './dateformating';
 import { FaCheck, FaTimes } from 'react-icons/fa';
+import { Raleway } from 'next/font/google';
 
-
+const raleway = Raleway({
+  weight: '400',
+  subsets: ['latin'],
+ 
+  variable:'--font-raleway',
+})
 
 export default function Samplebet(){
 	
@@ -43,10 +49,9 @@ export default function Samplebet(){
 
     return(
         <div className="container mx-auto">
-            <p className="text-4xl font-bold mt-3 mb-2"> Some sample life bet </p>
-            <div className="flex w-full flex-col overflow-x-auto">
-			<button
-        className="btn btn-success hover:bg-green-700 text-white px-3 py-2 rounded-md focus:outline-none"
+            <p className={`text-4xl font-bold mt-4 mb-2 ${raleway.className}`}> Some sample life bet </p>
+            <button
+        className="btn btn-success flex self-center justify-center  hover:bg-green-700 text-white px-3 py-2 rounded-md focus:outline-none"
         onClick={toggleTable}
       >
         {isTableVisible ? 'Hide Table' : 'Show some sample bets'}
@@ -82,6 +87,8 @@ export default function Samplebet(){
           </svg>
         )}
       </button>
+            <div className="flex w-full flex-col overflow-x-auto">
+
 
       {isTableVisible && (
         <table className="table-zebra table">
@@ -121,7 +128,7 @@ export default function Samplebet(){
         </table>)}
 		</div>
 		<div className="flex justify-center">
-			<button className="btn btn-success hover:bg-green-700 mt-5 text-center justify-center self-center">Visit for more bets</button>
+			<button className="btn mb-8 btn-success hover:bg-green-700 mt-5 text-center justify-center self-center">Visit for more bets</button>
 			</div>
 		</div> 
 		

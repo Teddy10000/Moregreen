@@ -11,7 +11,7 @@
   border-radius: 50px; /* Oval shape */
   
   top: 1rem;
-  left: 1rem;
+  left: 1;
   right: 1rem;
   z-index: 10; 
  
@@ -77,4 +77,29 @@
 
 .mobile-menu-button.open {
   transform: rotate(90deg); /* Rotate the icon when the menu is open */
+}
+
+/* styles.css */
+
+@media (max-width: 560px) {
+  .custom-margin {
+    margin-right: 120px; /* Apply a larger margin for screens narrower than 640px */
+  }
+}
+@media (max-width: 415px) {
+  .custom-margin {
+    margin-right: 480px; /* Apply a larger margin for screens narrower than 640px */
+  }
+}
+
+@media (max-width: 391px) {
+  .custom-margin {
+    margin-right: 500px; /* Apply a larger margin for screens narrower than 640px */
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-margin {
+    margin-right: 60px; /* Apply an even larger margin for screens wider than 768px */
+  }
 }
