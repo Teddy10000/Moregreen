@@ -48,7 +48,7 @@ const Navbar = () => {
             {status == 'authenticated' ? <button onClick={()=>signOut()} className="btn btn-success hover:bg-green-700">signout</button> : (
         <>
         <button  onClick={()=>route.push('/signin')} className="btn btn-success mb-3 hover:bg-green-700">login</button>
-        <button  onClick={()=>route.push('/signins')} className="btn btn-success hover:bg-green-700">signup</button>
+        <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">signup</button>
         </>
         )}
         </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
         : (
         <>
          <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">login</button>
-         <button  onClick={()=>route.push('/signins')} className="btn btn-success hover:bg-green-700">signup</button>
+         <button  onClick={()=>route.push('/signin')} className="btn btn-success hover:bg-green-700">signup</button>
         </>
         )}
         </div> 

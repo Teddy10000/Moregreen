@@ -33,33 +33,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen">
       <body className={inter.className}>
-        {loading ? (
-          <div className="flex justify-center self-center content-center w-full h-full">
-          <div className="spinner-dot-circle w-[200px] h-[980px]">
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <div className="spinner-dot"></div>
-          <style>
+      {loading ? (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="spinner-circle w-32 h-32 border-t-4 border-green-500 border-solid rounded-full a">
+
+        <style>
         {`
-          .spinner-dot-circle {
+          .spinner-circle {
             
-            width: 300px;
-            height: 300px;
+            --spinner-color: green;
             color:green;
             
           }
         `}
       </style>
         </div>
-        </div>
+     
+     
+      </div>
 
         ) : ( 
           <>

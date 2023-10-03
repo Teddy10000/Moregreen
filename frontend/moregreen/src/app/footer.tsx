@@ -50,6 +50,11 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+       <hr className="my-6 border-white" />
+
+      <div className="container mx-auto text-center text-sm">
+        <p>&copy; Sky-Tech Inc {new Date().getFullYear()}</p>
+      </div>
     </footer>
   );
 };

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Image  from 'next/image'; 
-
+import image2 from '../components/images/happy-smiling-african-man-showing-football-money-banknotes.jpg'
 import { Abel, Raleway, Roboto } from 'next/font/google';
 import { fadeIn ,fadeInRight,} from '../components/homesection/variants';
 import { motion } from 'framer-motion';
@@ -28,13 +28,13 @@ const AboutHeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src={""} // Replace with the actual path to your image
+          src={image2} // Replace with the actual path to your image
           alt="Designed by Freepik"
           objectFit="cover"
           layout='fill'
           className=''
         />
-        <div className="bg-green-200 opacity-70 absolute inset-0"></div>
+        <div className="bg-green-200 opacity-50 absolute inset-0"></div>
       </div>
 
       {/* Content */}
