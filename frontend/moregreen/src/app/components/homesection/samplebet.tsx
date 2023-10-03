@@ -3,12 +3,12 @@
 
 import {useState, useEffect} from 'react';
 import Image from 'next/image';
-
+import { usePathname ,useRouter } from 'next/navigation'; 
 import { useData } from '../../../../sanity/DataContext';
 import formatDateTime from './dateformating';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import { Raleway } from 'next/font/google';
-
+const route = useRouter();
 const raleway = Raleway({
   weight: '400',
   subsets: ['latin'],
@@ -128,7 +128,7 @@ export default function Samplebet(){
         </table>)}
 		</div>
 		<div className="flex justify-center">
-			<button className="btn mb-8 btn-success hover:bg-green-700 mt-5 text-center justify-center self-center">Visit for more bets</button>
+			<button onClick={()=>route.push('/signin')} className="btn mb-8 btn-success hover:bg-green-700 mt-5 text-center justify-center self-center">Visit for more bets</button>
 			</div>
 		</div> 
 		

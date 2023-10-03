@@ -6,7 +6,7 @@ import { Oswald, Raleway, Roboto } from 'next/font/google';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
-
+import image from '../images/young-supporter-betting-online (1).jpg'
 const oswald = Oswald({
   weight: '400',
   subsets: ['latin'],
@@ -33,10 +33,10 @@ const BettingAdviceSection: React.FC = () => {
         {/* Image with Background Removed (Left) */}
         <div className=" invisible md:visible md:w-1/2 mb-8">
           <Image
-            src="/your-image.jpg" // Replace with your image
+            src={image} // Replace with your image
             alt="Betting Advice" 
-            width={300}
-             height={200}
+            layout='responsive'
+         
             className="w-full h-auto object-cover"
           />
         </div>
