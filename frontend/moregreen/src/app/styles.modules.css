@@ -92,6 +92,12 @@
   }
 }
 
+@media (max-width: 430px) {
+  .custom-margin {
+    margin-right: 450px; /* Apply a larger margin for screens narrower than 640px */
+  }
+}
+
 @media (max-width: 391px) {
   .custom-margin {
     margin-right: 500px; /* Apply a larger margin for screens narrower than 640px */
