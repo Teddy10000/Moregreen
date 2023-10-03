@@ -8,7 +8,7 @@ import { useData } from '../../../../sanity/DataContext';
 import formatDateTime from './dateformating';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import { Raleway } from 'next/font/google';
-const route = useRouter();
+
 const raleway = Raleway({
   weight: '400',
   subsets: ['latin'],
@@ -17,7 +17,7 @@ const raleway = Raleway({
 })
 
 export default function Samplebet(){
-	
+	const route = useRouter();
   const [isTableVisible, setTableVisible] = useState(false);
   const { bettingData, isLoading } = useData();
 	const toggleTable = () => {
